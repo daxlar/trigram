@@ -252,9 +252,9 @@ static void advertising_init(void)
 
     adv_params.primary_phy     = BLE_GAP_PHY_1MBPS;
     adv_params.duration        = APP_ADV_DURATION;
-    adv_params.properties.type = BLE_GAP_ADV_TYPE_CONNECTABLE_SCANNABLE_UNDIRECTED;
+    //adv_params.properties.type = BLE_GAP_ADV_TYPE_CONNECTABLE_SCANNABLE_UNDIRECTED;
     //can't be connected to
-    //adv_params.properties.type = BLE_GAP_ADV_TYPE_NONCONNECTABLE_SCANNABLE_UNDIRECTED;
+    adv_params.properties.type = BLE_GAP_ADV_TYPE_NONCONNECTABLE_SCANNABLE_UNDIRECTED;
     adv_params.p_peer_addr     = NULL;
     adv_params.filter_policy   = BLE_GAP_ADV_FP_ANY;
     adv_params.interval        = APP_ADV_INTERVAL;
