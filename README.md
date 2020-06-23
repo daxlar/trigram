@@ -26,7 +26,7 @@ Note: firmware in ble_app_uart_trigram_send_w_spis in flashed onto NRF52832 DK
 Open ble_app_uart_trigram_send_w_spis/pca10040/s132/ses to get started  
 
 Connect SPIM, SPIS pins and GND  
-NRF52840 DK         ->          NRF52832  
+NRF52840 DK         ->          NRF52832 DK   
 P0.27(CLK)          ->          P0.27  
 P0.26(MISO)         ->          P0.26  
 P0.02(MOSI)         ->          P0.02  
