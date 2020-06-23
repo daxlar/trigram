@@ -39,7 +39,7 @@ If you have not downloaded trigram_app yet, please do so
 Power NRF52832 DK first, and it will advertise as NORDIC_UART. Connect the trigram_app to it.  
 Power NRF52840 DK second, and bluetooth MAC addresses will begin streaming to app.
 
-Current Setup:  
-<div align="center">  
+Current Setup (NRF52840 on the right, NRF52832 on the left):  
+
 ![NRF52840 on left, NRF52832 on right](https://github.com/daxlar/trigram/blob/master/pictures/nrf52840_nrf52832.jpg)  
-</div>
+
