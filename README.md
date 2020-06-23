@@ -21,3 +21,20 @@ Open ble_app_trigram_recv_w_spim/pca10056/s140/ses to get started
 Note: firmware in ble_app_uart_trigram_send_w_spis in flashed onto NRF52832 DK
 Open ble_app_uart_trigram_send_w_spis/pca10040/s132/ses to get started
 
+Connect SPIM, SPIS pins and GND
+NRF52840 DK         ->          NRF52832
+P0.27(CLK)          ->          P0.27
+P0.26(MISO)         ->          P0.26
+P0.02(MOSI)         ->          P0.02
+P1.13(CS)           ->          P0.23
+GND                 ->          GND
+
+Operation process:
+
+If you have not downloaded trigram_app yet, please do so
+Power NRF52832 DK first, and it will advertise as NORDIC_UART. Connect the trigram_app to it.
+Power NRF52840 DK second, and bluetooth MAC addresses will begin streaming to app.
+
+
+
+
