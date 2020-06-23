@@ -2,13 +2,13 @@
 
 Overview:
 
-Trigram is a tool that helps track how well you socially distance by using SCAN_REQUEST packets from the cellphones of those around you
-The idea is to tune the TX power of NRF52 bluetooth radio to limit advertisement range, so that NRF52 is local maximum and global minimum
-If NRF52 BLE stack can receive SCAN_REQUEST, a device must be within NRF52 advertisement range
+Trigram is a tool that helps track how well you socially distance by using SCAN_REQUEST packets from the cellphones of those around you  
+The idea is to tune the TX power of NRF52 bluetooth radio to limit advertisement range, so that NRF52 is local maximum and global minimum  
+If NRF52 BLE stack can receive SCAN_REQUEST, a device must be within NRF52 advertisement range  
 
-After testing in open environment, -40dBM TX power seems to limit range to about ~8ft
-We can use rate of SCAN_REQUEST packets, combined with the trigram_app to calculate a probable device within 6ft
-The trigram_app uses a magnetometer to try to calibrate real-time readings that may be influenced by ferromagnetic metals in environment
+After testing in open environment, -40dBM TX power seems to limit range to about ~8ft  
+We can use rate of SCAN_REQUEST packets, combined with the trigram_app to calculate a probable device within 6ft  
+The trigram_app uses a magnetometer to try to calibrate real-time readings that may be influenced by ferromagnetic metals in environment  
 
 Getting started:  
 
