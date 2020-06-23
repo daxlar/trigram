@@ -12,7 +12,7 @@ After testing in open environment, -40dBM TX power seems to limit range to about
 It was curious to observe that distance ~ rate of received SCAN_REQUEST packets  
 We can use rate of SCAN_REQUEST packets, combined with the trigram_app to calculate a probable device within 6ft  
 However, the SCAN_REQUEST packets may be influenced by ferromagnetic metals in the environment  
-The trigram_app uses the on-phone magnetometer to try to perform a real-time calibration of the rate of SCAN_REQUEST packets    
+The trigram_app uses the on-phone magnetometer to try to calibrate rate of SCAN_REQUEST packets in real-time  
 
 Getting started:  
 
