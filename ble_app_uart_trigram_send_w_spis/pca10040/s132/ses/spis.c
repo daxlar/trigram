@@ -56,12 +56,12 @@ void spis_init(){
 }
 
 void spis_rx(char* tx_buffer, char* rx_buffer, uint8_t buffer_length){
+  nrf_spis_task_trigger(NRF_SPIS0, NRF_SPIS_TASK_RELEASE);
   nrf_spis_rx_buffer_set(NRF_SPIS0, rx_buffer, buffer_length);
   nrf_spis_tx_buffer_set(NRF_SPIS0, tx_buffer, buffer_length);
   while(nrf_gpio_pin_read(SER_CON_SPIS_CSN_PIN)){
   }
   nrf_spis_event_clear(NRF_SPIS0, NRF_SPIS_EVENT_END);
-  nrf_spis_task_trigger(NRF_SPIS0, NRF_SPIS_TASK_RELEASE);
   while(!nrf_spis_event_check(NRF_SPIS0, NRF_SPIS_EVENT_END)){
   }
 }

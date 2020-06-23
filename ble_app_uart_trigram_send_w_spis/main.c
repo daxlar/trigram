@@ -735,20 +735,12 @@ int main(void)
     // Enter main loop.
     for (;;)
     {
-        
-        //idle_state_handle();
         while(!connectedVar){
         }
         while(connectedVar){
           spis_rx(tx_buffer, rx_buffer, 6);
           ble_nus_data_send(&m_nus, rx_buffer, &length, m_conn_handle);
         }
-        
-        //printf("hello world");
-        //spis_rx(tx_buffer, rx_buffer, 6);
-
-        //print_buffer();
-
     }
 }
 

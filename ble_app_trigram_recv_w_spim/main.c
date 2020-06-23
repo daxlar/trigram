@@ -544,16 +544,6 @@ static void idle_state_handle(void)
     }
 }
 
-void fill_buffer(){
-  tx_buffer[0] = 'a';
-  tx_buffer[1] = 'b';
-  tx_buffer[2] = 'c';
-  tx_buffer[3] = 'd';
-  tx_buffer[4] = 'e';
-  tx_buffer[5] = 'f';
-}
-
-
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -572,7 +562,6 @@ int main(void)
     sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_ADV, m_adv_handle, -40);
     advertising_start();
     spim_init();
-    //fill_buffer();
    
     while(1){
       while(new_device_mac_address == false){

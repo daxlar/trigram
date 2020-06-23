@@ -52,14 +52,14 @@ void spim_init(){
   //SCK active high, sample on leading edge of clock, most significant bit shifted out first.
   nrf_spim_configure(NRF_SPIM0, NRF_SPIM_MODE_0, NRF_SPIM_BIT_ORDER_MSB_FIRST);
   nrf_spim_enable(NRF_SPIM0);
+  //setup gpio for CS line
+  nrf_gpio_cfg_output(SER_APP_SPIM0_SS_PIN);
 }
 
 void spim_tx(char* tx_buffer, char* rx_buffer, uint8_t buffer_length){
     //set tx EASYDMA buffer
     nrf_spim_tx_buffer_set(NRF_SPIM0, tx_buffer, buffer_length);
     nrf_spim_rx_buffer_set(NRF_SPIM0, rx_buffer, buffer_length);
-    //setup gpio for CS line
-    nrf_gpio_cfg_output(SER_APP_SPIM0_SS_PIN);
     //set CS line low to begin transaction
     nrf_gpio_pin_clear(SER_APP_SPIM0_SS_PIN);
     //reset NRF_SPIM_EVENT_END event to reset EASYDMA
